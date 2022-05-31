@@ -8,4 +8,12 @@
         <LangVersion>default</LangVersion>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <NoWarn>$(NoWarn);MYW001</NoWarn>
+    </PropertyGroup>
+    <Target Name="MyTarget" BeforeTargets="BeforeBuild">
+        <Message Text="NoWarn: $(NoWarn)" />
+        <Warning Text="My warning" Code="MYW001" />
+    </Target>
+
 </Project>

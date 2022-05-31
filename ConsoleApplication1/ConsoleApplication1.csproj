@@ -51,4 +51,12 @@
     </Target>
     -->
 
+    <PropertyGroup>
+        <NoWarn>$(NoWarn);MYW002</NoWarn>
+    </PropertyGroup>
+    <Target Name="MyTarget" BeforeTargets="BeforeBuild">
+        <Message Text="NoWarn: $(NoWarn)" />
+        <Warning Text="My warning" Code="MYW002" />
+    </Target>
+
 </Project>
